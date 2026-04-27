@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blue Navbar Shadow</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f7fb;
+}
+
+/* ===== NAVBAR ===== */
+header {
+    position: relative;
+    overflow: hidden;
+
+    background: #1e66f5; /* biru utama */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== AURORA KECIL ===== */
+header::before {
+    content: "";
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    top: -80px;
+    left: 30%;
+
+    background: radial-gradient(circle, rgba(255,255,255,0.35), transparent 60%);
+    filter: blur(30px);
+    opacity: 0.6;
+
+    animation: floatGlow 18s ease-in-out infinite;
+    z-index: 0;
+}
+
+@keyframes floatGlow {
+    0% { transform: translate(0, 0) scale(1); }
+    50% { transform: translate(40px, 20px) scale(1.2); }
+    100% { transform: translate(0, 0) scale(1); }
+}
+
+/* ===== NAV CONTENT ===== */
+.navbar {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+
+    color: white;
+}
+
+.logo {
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+    font-weight: 500;
+}
+
+.nav-menu a:hover {
+    opacity: 0.8;
+}
+
+/* ===== HERO ===== */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 7.84rem 2rem;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero-text p {
+    color: #555;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.hero .original-button {
+   display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  text-decoration: none;
+  /* color: #ffffff; */
+  color: #000;
+  font-size: 18px;
+  border-radius: 10px;
+  width: 200px;
+  height: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.hero .original-button:hover {
+    background-color: #1976d2;
+  /* opacity: .3; */
+  color: #fff;
+  cursor: pointer;
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-image img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+/* responsive */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+    }
+}
+
+
+/* ===== ABOUT SECTION ===== */
+.about {
+    background: #ffffff;
+    padding: 100px 20px; /* SPASI BESAR */
+}
+
+.about h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.about-desc {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 50px auto; /* SPASI KE GRID */
+    color: #666;
+    line-height: 1.6;
+}
+
+/* grid biodata */
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+/* card biodata */
+.about-card {
+    background: #f5f7fb;
+    padding: 25px;
+    border-radius: 14px;
+    text-align: center;
+    border: 1px solid rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
+
+.about-card h3 {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    color: #1e66f5;
+}
+
+.about-card p {
+    margin: 0;
+    font-weight: 500;
+}
+
+/* hover */
+.about-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.1);
+}
+
+/* responsive */
+@media (max-width: 768px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+
+
+/* ===== PROJECT SECTION ===== */
+.project {
+    background: #ffffff;
+    padding: 80px 20px;
+}
+
+.project h2 {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.project p {
+    text-align: center;
+    color: #666;
+}
+
+/* grid 3 card */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 40px;
+}
+
+/* card style */
+.project-card {
+    text-align: center;
+    background: #f5f7fb;
+    padding: 25px;
+    border-radius: 14px;
+    border: 1px solid rgba(0,0,0,0.05);
+    transition: 0.3s ease;
+}
+
+.project-card h3 {
+    margin-bottom: 10px;
+}
+
+/* hover effect */
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+}
+
+/* responsive */
+@media (max-width: 768px) {
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* ===== FOOTER ===== */
+.footer {
+    background: #1e66f5;
+    color: white;
+    text-align: center;
+    padding: 1.5rem 1rem;
+    margin-top: 50px;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.container {
+    max-width: 1100px;   /* batas lebar konten */
+    margin: 0 auto;      /* center horizontal */
+    padding: 0 20px;     /* jarak kiri kanan */
+}
+
+@media (min-width: 1024px) {
+    .container {
+        padding: 0 40px; /* lebih lega di desktop */
+    }
+}
+
+
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="navbar">
+        <div class="logo">MyLogo</div>
+
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="#">Beranda</a></li>
+                <li><a href="#">Tentang</a></li>
+                <li><a href="#">Layanan</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="hero-text">
+        <h1>Halo, Saya Developer</h1>
+        <p>
+            Saya membuat website modern, cepat, dan clean dengan desain yang fokus pada pengalaman pengguna.
+        </p>
+        <button class="original-button">Klik disini</button>
+    </div>
+
+    <div class="hero-image">
+        <img src="https://images.unsplash.com/photo-1624797432677-6f803a98acb3?q=80&w=686&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" loading="lazy" alt="me">
+    </div>
+</section>
+
+
+<!-- ABOUT ME -->
+<section id="about" class="about">
+    <div class="container">
+
+        <h2>About Me</h2>
+        <p class="about-desc">
+            Saya adalah seorang developer yang fokus pada pembuatan website modern,
+            responsive, dan user-friendly dengan desain clean dan performa optimal.
+        </p>
+
+        <div class="about-grid">
+
+            <div class="about-card">
+                <h3>Nama</h3>
+                <p>Nama Kamu</p>
+            </div>
+
+            <div class="about-card">
+                <h3>Umur</h3>
+                <p>20 Tahun</p>
+            </div>
+
+            <div class="about-card">
+                <h3>Lokasi</h3>
+                <p>Indonesia</p>
+            </div>
+
+            <div class="about-card">
+                <h3>Pekerjaan</h3>
+                <p>Frontend Developer</p>
+            </div>
+
+            <div class="about-card">
+                <h3>Email</h3>
+                <p>email@mail.com</p>
+            </div>
+
+            <div class="about-card">
+                <h3>Hobi</h3>
+                <p>Coding & Design</p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- PROJECT -->
+<section id="project" class="project">
+    <div class="container">
+        <h2>Project</h2>
+        <p>Beberapa project yang pernah saya buat.</p>
+
+        <div class="project-grid">
+            <div class="project-card">
+                <h3>Website Portfolio 1</h3>
+                <p>Website personal modern dengan desain clean dan responsive.</p>
+            </div>
+
+            <div class="project-card">
+                <h3>Landing Page Produk 2</h3>
+                <p>Landing page untuk promosi produk dengan UI modern.</p>
+            </div>
+
+            
+            <div class="project-card">
+                <h3>Dashboard Admin 3</h3>
+                <p>Dashboard admin sederhana dengan data visualisasi.</p>
+            </div>
+
+            <div class="project-card">
+                <h3>Project 4</h3>
+                <p>Project description for me</p>
+            </div>
+            <div class="project-card">
+                <h3>Project 5</h3>
+                <p>Project description for me</p>
+            </div>
+            <div class="project-card">
+                <h3>Project 6</h3>
+                <p>Project description for me</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<footer class="footer">
+    <p>&copy; 2026 Nama Kamu. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
