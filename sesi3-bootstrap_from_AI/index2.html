@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Bootstrap demo</title>
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+			crossorigin="anonymous"
+		/>
+
+		<style>
+			/* STYLE HEADER */
+			/* .form-control-dark {
+				border-color: var(--bs-gray);
+			} */
+
+			/* body {
+				background-color: #ffffff;
+			} */
+
+			.form-control-dark {
+				color: #fff;
+				background-color: transparent;
+				border-color: #495057;
+			}
+
+			input[type="search"]::-webkit-search-cancel-button {
+				filter: invert(1);
+				/* background-color: #ffffff; */
+			}
+
+			/* input[type="search"]::-webkit-search-cancel-button {
+				display: none;
+			} */
+
+			.form-control-dark::placeholder {
+				color: rgba(255, 255, 255, 0.75);
+			}
+
+			.form-control-dark:focus {
+				border-color: #fff;
+				box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.25);
+			}
+
+			.text-small {
+				font-size: 85%;
+			}
+
+			.dropdown-toggle:not(:focus) {
+				outline: 0;
+			}
+		</style>
+
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+		/>
+	</head>
+	<body>
+		<header class="p-3 text-bg-danger shadow-lg">
+			<div class="container">
+				<nav class="navbar navbar-expand-lg navbar-dark">
+					<!-- Brand -->
+					<a class="navbar-brand" href="#">MyApp</a>
+
+					<!-- tombol hamburger (mobile) -->
+					<button
+						class="navbar-toggler"
+						type="button"
+						data-bs-toggle="collapse"
+						data-bs-target="#navbarContent"
+					>
+						<span class="navbar-toggler-icon"></span>
+					</button>
+
+					<!-- isi navbar -->
+					<div class="collapse navbar-collapse" id="navbarContent">
+						<!-- menu -->
+						<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+							<li class="nav-item">
+								<a class="nav-link active" href="#">Home</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">Features</a>
+							</li>
+							<li class="nav-item"><a class="nav-link" href="#">Pricing</a></li>
+							<li class="nav-item"><a class="nav-link" href="#">FAQs</a></li>
+							<li class="nav-item"><a class="nav-link" href="#">About</a></li>
+						</ul>
+
+						<!-- search -->
+						<form class="d-flex me-lg-3 mb-3 mb-lg-0" role="search">
+							<input
+								class="form-control form-control-dark text-bg-dark"
+								type="search"
+								placeholder="Search..."
+							/>
+						</form>
+
+						<!-- tombol -->
+						<div class="d-flex gap-2">
+							<button class="btn btn-outline-light">Login</button>
+							<button class="btn btn-warning">Sign-up</button>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</header>
+
+		<!-- heroe section -->
+		<div class="container col-xxl-12 px-4 py-5">
+			<div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+				<div class="col-10 col-sm-8 col-lg-6">
+					<img
+						src="https://plus.unsplash.com/premium_photo-1722859326392-f9f7120bf430?q=80&w=831&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+						class="d-block mx-lg-auto img-fluid"
+						alt="me"
+						width="400"
+						height="600"
+						loading="lazy"
+					/>
+				</div>
+				<div class="col-lg-6">
+					<h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">
+						Responsive left-aligned hero with image
+					</h1>
+					<p class="lead">
+						Quickly design and customize responsive mobile-first sites with
+						Bootstrap, the world’s most popular front-end open source toolkit,
+						featuring Sass variables and mixins, responsive grid system,
+						extensive prebuilt components, and powerful JavaScript plugins.
+					</p>
+					<div class="d-grid gap-2 d-md-flex justify-content-md-start">
+						<button type="button" class="btn btn-primary btn-lg px-4 me-md-2">
+							Primary
+						</button>
+						<button type="button" class="btn btn-outline-secondary btn-lg px-4">
+							Default
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- about -->
+
+		<div class="my-5">
+			<div class="p-5 text-center bg-body-tertiary">
+				<div class="container py-5">
+					<h1 class="text-body-emphasis">Full-width jumbotron</h1>
+					<p class="col-lg-8 mx-auto lead">
+						This takes the basic jumbotron above and makes its background
+						edge-to-edge with a <code>.container</code> inside to align content.
+						Similar to above, it's been recreated with built-in grid and utility
+						classes.
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<!-- project -->
+
+		<div class="container-xxl my-5">
+			<div class="row d-grid gap-3">
+				<div class="col-sm-4 mb-3 mb-sm-0">
+					<div class="card">
+						<div class="card-body">
+							<h5 class="card-title">Special title treatment</h5>
+							<p class="card-text">
+								With supporting text below as a natural lead-in to additional
+								content.
+							</p>
+							<a href="#" class="btn btn-primary">Go somewhere</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-sm-4">
+					<div class="card">
+						<div class="card-body">
+							<h5 class="card-title">Special title treatment</h5>
+							<p class="card-text">
+								With supporting text below as a natural lead-in to additional
+								content.
+							</p>
+							<a href="#" class="btn btn-primary">Go somewhere</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="card">
+						<div class="card-body">
+							<h5 class="card-title">Special title treatment</h5>
+							<p class="card-text">
+								With supporting text below as a natural lead-in to additional
+								content.
+							</p>
+							<a href="#" class="btn btn-primary">Go somewhere</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="card">
+						<div class="card-body">
+							<h5 class="card-title">Special title treatment</h5>
+							<p class="card-text">
+								With supporting text below as a natural lead-in to additional
+								content.
+							</p>
+							<a href="#" class="btn btn-primary">Go somewhere</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-sm-4">
+					<div class="card">
+						<div class="card-body">
+							<h5 class="card-title">Special title treatment</h5>
+							<p class="card-text">
+								With supporting text below as a natural lead-in to additional
+								content.
+							</p>
+							<a href="#" class="btn btn-primary">Go somewhere</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-sm-4">
+					<div class="card">
+						<div class="card-body">
+							<h5 class="card-title">Special title treatment</h5>
+							<p class="card-text">
+								With supporting text below as a natural lead-in to additional
+								content.
+							</p>
+							<a href="#" class="btn btn-primary">Go somewhere</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+			crossorigin="anonymous"
+		></script>
+	</body>
+</html>
