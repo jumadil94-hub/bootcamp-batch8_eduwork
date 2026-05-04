@@ -16,8 +16,10 @@
 		/>
 
 		<style>
+			@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 			body {
-				font-family: "Courier New", Courier, monospace;
+				font-family: "Poppins", sans-serif;
 			}
 
 			/* custom btn toggle navbar */
@@ -83,8 +85,12 @@
 				text-align: center;
 			}
 
-			#biodata .card-body .card-body {
+			#biodata .card-body {
 				text-align: center;
+			}
+
+			#biodata .card-body .card {
+				background-color: transparent;
 			}
 
 			#project .card-body .card-title {
@@ -93,6 +99,9 @@
 				text-align: center;
 			}
 		</style>
+
+		<!-- Aos animation css -->
+		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 	</head>
 	<body>
 		<nav
@@ -101,7 +110,8 @@
 		>
 			<!-- <div class="container col-lg-auto"> -->
 			<div class="gradient-dots"></div>
-			<div class="container col-lg-8">
+			<!-- <div class="container col-lg-8"> -->
+			<div class="container">
 				<a class="navbar-brand" href="#">MyApp</a>
 				<button
 					class="navbar-toggler border-0"
@@ -111,80 +121,103 @@
 				>
 					<span class="toggler-icon"></span>
 				</button>
-				<div class="collapse navbar-collapse" id="navbarSupportedContent">
-					<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+				<div class="collapse navbar-collapse " id="navbarSupportedContent">
+					<ul class="navbar-nav ms-auto d-lg-flex d-md-block flex-lg-row gap-lg-2  mb-2 mb-lg-0">
 						<li class="nav-item">
 							<a class="nav-link active" aria-current="page" href="#">Home</a>
 						</li>
+
 						<li class="nav-item">
-							<a class="nav-link" href="#biodata">Biodata</a>
+							<a class="nav-link" href="#aboutme">About Me</a>
 						</li>
 
 						<li class="nav-item">
-							<a class="nav-link" href="#project">Portofolio</a>
+							<a class="nav-link" href="#services">Services</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#project">Projects</a>
+						</li>
+
+						<li class="nav-item">
+							<a class="nav-link" href="#testimonial">Testimonials</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#contact">Contact</a>
 						</li>
 					</ul>
+					<form class="d-flex ms-lg-4 " role="download">
+						<button class="btn btn-warning" type="button">
+							Download CV
+						</button>
+					</form>
 				</div>
+
 				<!-- </div> -->
 			</div>
 		</nav>
 
 		<!-- HEROES -->
-		<section id="heroes" class="container col-xxl-8 px-4 py-5">
+		<section
+			id="heroes"
+			class="container col-xxl-8 px-4"
+			style="padding: 4em 0"
+		>
 			<div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-				<div class="col-12 col-sm-12 col-lg-6">
+				<div class="col-12 col-sm-12 col-lg-4">
 					<div class="card border border-0">
 						<img
 							src="https://i.pravatar.cc/300"
-							class="d-block mx-auto img-fluid rounded-circle p-2"
+							class="d-block mx-auto img-fluid rounded-circle p-2 border border-warning"
 							alt="me"
 							width="400"
 							height="150"
 							loading="lazy"
 						/>
-						<div class="card-body text-center">
+						<div class="card-body text-center d-flex justify-content-center gap-2 ">
 							<a href=""
 								><i
 									class="bi bi-facebook"
-									style="font-size: 2rem; color: cornflowerblue"
+									style="font-size: 1.6rem; color: #ccc"
 								></i
 							></a>
 
 							<a href=""
 								><i
-									class="bi bi-instagram"
-									style="font-size: 2rem; color: rgb(0, 0, 0)"
+									class="bi bi-twitter"
+									style="font-size: 1.6rem; color: #ccc"
 								></i
 							></a>
 							<a href=""
 								><i
-									class="bi bi-youtube"
-									style="font-size: 2rem; color: rgb(252, 5, 5)"
+									class="bi bi-whatsapp"
+									style="font-size: 1.6rem; color: #ccc"
 								></i
 							></a>
 							<a href=""
 								><i
 									class="bi bi-linkedin"
-									style="font-size: 2rem; color: #09004f"
+									style="font-size: 1.6rem; color: #ccc"
 								></i
 							></a>
 						</div>
 					</div>
 				</div>
 
-				<div class="col-lg-6">
+				<div class="col-lg-8">
+					<h6>Hi I am</h6>
+					<h5 style="color: #ffa602;">Jumadil Mustamin</h5>
 					<h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">
-						Selamat datang di website saya
+						<span class="d-block"> Web</span>
+						<span class="d-inline-block ms-5"> Developer</span>
 					</h1>
-					<p class="lead">
-						Ini adalah contoh header dua kolom. kolom kiri berisi teks seperti
-						ini dan kolom kanan berisi gambar
+					<p class="lead text-left">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio harum aliquid mollitia doloribus corporis voluptatum corrupti impedit recusandae illo, in nam qui repellat aut tempore ab veniam nemo velit asperiores.
 					</p>
 					<div class="d-grid gap-2 d-md-flex justify-content-md-start">
 						<button type="button" class="btn btn-primary btn-lg px-4 me-md-2">
 							Portofolio
 						</button>
-						<button type="button" class="btn btn-outline-secondary btn-lg px-4">
+						<button type="button" class="btn btn-outline-success btn-lg px-4">
 							Kontak
 						</button>
 					</div>
@@ -194,59 +227,61 @@
 
 		<!-- BIODATA -->
 
-		<section id="biodata" class="container col-xxl-8 px-4 my-5 pb-5">
-			<div class="card border border-0">
-				<div class="card_header text-center mb-2">
-					<h4 class="card-title">Biodata</h4>
-					<p class="card-text">kamu dapat melihat biodata saya disini</p>
-				</div>
-				<div class="card-body">
-					<div class="row row-cols-md-3 g-3">
-						<div class="col">
-							<div class="card">
-								<div class="card-body">
-									<h5 class="card-title">Full name</h5>
-									<p class="card-text">Jumadil Mustamin</p>
+		<section id="biodata" class="bg-body-secondary py-5">
+			<div class="container col-xxl-8 px-4">
+				<div class="card border border-0 bg-transparent" data-aos="fade-down">
+					<div class="card_header text-center mb-2">
+						<h4 class="card-title">Biodata</h4>
+						<p class="card-text">kamu dapat melihat biodata saya disini</p>
+					</div>
+					<div class="card-body">
+						<div class="row row-cols-md-3 g-3">
+							<div class="col">
+								<div class="card">
+									<div class="card-body">
+										<h5 class="card-title">Full name</h5>
+										<p class="card-text">Jumadil Mustamin</p>
+									</div>
 								</div>
 							</div>
-						</div>
-						<div class="col">
-							<div class="card">
-								<div class="card-body">
-									<h5 class="card-title">Education</h5>
-									<p class="card-text">D3 Managemen Informatika</p>
+							<div class="col">
+								<div class="card">
+									<div class="card-body">
+										<h5 class="card-title">Education</h5>
+										<p class="card-text">D3 Managemen Informatika</p>
+									</div>
 								</div>
 							</div>
-						</div>
-						<div class="col">
-							<div class="card">
-								<div class="card-body">
-									<h5 class="card-title">Pekerjaan</h5>
-									<p class="card-text">Programmer</p>
+							<div class="col">
+								<div class="card">
+									<div class="card-body">
+										<h5 class="card-title">Pekerjaan</h5>
+										<p class="card-text">Programmer</p>
+									</div>
 								</div>
 							</div>
-						</div>
-						<div class="col">
-							<div class="card">
-								<div class="card-body">
-									<h5 class="card-title">Contact</h5>
-									<p class="card-text">jumadilmustamin6@gmail.com</p>
+							<div class="col">
+								<div class="card">
+									<div class="card-body">
+										<h5 class="card-title">Contact</h5>
+										<p class="card-text">jumadilmustamin6@gmail.com</p>
+									</div>
 								</div>
 							</div>
-						</div>
-						<div class="col">
-							<div class="card">
-								<div class="card-body">
-									<h5 class="card-title">Hobi</h5>
-									<p class="card-text">Membaca, Olahraga</p>
+							<div class="col">
+								<div class="card">
+									<div class="card-body">
+										<h5 class="card-title">Hobi</h5>
+										<p class="card-text">Membaca, Olahraga</p>
+									</div>
 								</div>
 							</div>
-						</div>
-						<div class="col">
-							<div class="card">
-								<div class="card-body">
-									<h5 class="card-title">Alamat</h5>
-									<p class="card-text">Palopo</p>
+							<div class="col">
+								<div class="card">
+									<div class="card-body">
+										<h5 class="card-title">Alamat</h5>
+										<p class="card-text">Palopo</p>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -256,91 +291,117 @@
 		</section>
 
 		<!-- PROJECT -->
-		<section id="project" class="container col-xxl-8 px-4 pb-5">
-			<div class="card border border-0">
-				<div class="card_header text-center mb-2">
-					<h4 class="card-title">Project</h4>
-					<p class="card-text">
-						Ini adalah hasil project saya, selama bootcamp ini berlangsung
-					</p>
-				</div>
-				<div class="card-body">
-					<div class="row row-cols-1 row-cols-md-3 g-3">
-						<div class="col">
-							<div class="card">
-								<img src="..." class="card-img-top" alt="..." />
-								<div class="card-body">
-									<h5 class="card-title">Project e-goverment</h5>
-									<p class="card-text">
-										This is a longer card with supporting text below as a
-										natural lead-in to additional content. This content is a
-										little bit longer.
-									</p>
+		<section id="project" class="px-4 py-5">
+			<div class="container col-xxl-8">
+				<div class="card border border-0" data-aos="fade-down">
+					<div class="card_header text-center mb-2">
+						<h4 class="card-title">Project</h4>
+						<p class="card-text">
+							Ini adalah hasil project saya, selama bootcamp ini berlangsung
+						</p>
+					</div>
+					<div class="card-body">
+						<div class="row row-cols-1 row-cols-md-3 g-3">
+							<div class="col">
+								<div class="card">
+									<img
+										src="https://placehold.co/600x400@3x.png"
+										class="card-img-top"
+										alt="p-goverment"
+									/>
+									<div class="card-body">
+										<h5 class="card-title">Project e-goverment</h5>
+										<p class="card-text">
+											This is a longer card with supporting text below as a
+											natural lead-in to additional content. This content is a
+											little bit longer.
+										</p>
+									</div>
 								</div>
 							</div>
-						</div>
-						<div class="col">
-							<div class="card">
-								<img src="..." class="card-img-top" alt="..." />
-								<div class="card-body">
-									<h5 class="card-title">Project E-Apoteker</h5>
-									<p class="card-text">
-										This is a longer card with supporting text below as a
-										natural lead-in to additional content. This content is a
-										little bit longer.
-									</p>
+							<div class="col">
+								<div class="card">
+									<img
+										src="https://placehold.co/600x400@3x.png"
+										class="card-img-top"
+										alt="p-Apoteker"
+									/>
+									<div class="card-body">
+										<h5 class="card-title">Project E-Apoteker</h5>
+										<p class="card-text">
+											This is a longer card with supporting text below as a
+											natural lead-in to additional content. This content is a
+											little bit longer.
+										</p>
+									</div>
 								</div>
 							</div>
-						</div>
-						<div class="col">
-							<div class="card">
-								<img src="..." class="card-img-top" alt="..." />
-								<div class="card-body">
-									<h5 class="card-title">Project E-Commerce</h5>
-									<p class="card-text">
-										This is a longer card with supporting text below as a
-										natural lead-in to additional content. This content is a
-										little bit longer.
-									</p>
+							<div class="col">
+								<div class="card">
+									<img
+										src="https://placehold.co/600x400@3x.png"
+										class="card-img-top"
+										alt="p-e-commerce"
+									/>
+									<div class="card-body">
+										<h5 class="card-title">Project E-Commerce</h5>
+										<p class="card-text">
+											This is a longer card with supporting text below as a
+											natural lead-in to additional content. This content is a
+											little bit longer.
+										</p>
+									</div>
 								</div>
 							</div>
-						</div>
-						<div class="col">
-							<div class="card">
-								<img src="..." class="card-img-top" alt="..." />
-								<div class="card-body">
-									<h5 class="card-title">Project E-Tiket</h5>
-									<p class="card-text">
-										This is a longer card with supporting text below as a
-										natural lead-in to additional content. This content is a
-										little bit longer.
-									</p>
+							<div class="col">
+								<div class="card">
+									<img
+										src="https://placehold.co/600x400@3x.png"
+										class="card-img-top"
+										alt="p-tiket"
+									/>
+									<div class="card-body">
+										<h5 class="card-title">Project E-Tiket</h5>
+										<p class="card-text">
+											This is a longer card with supporting text below as a
+											natural lead-in to additional content. This content is a
+											little bit longer.
+										</p>
+									</div>
 								</div>
 							</div>
-						</div>
-						<div class="col">
-							<div class="card">
-								<img src="..." class="card-img-top" alt="..." />
-								<div class="card-body">
-									<h5 class="card-title">Project E-Samsat</h5>
-									<p class="card-text">
-										This is a longer card with supporting text below as a
-										natural lead-in to additional content. This content is a
-										little bit longer.
-									</p>
+							<div class="col">
+								<div class="card">
+									<img
+										src="https://placehold.co/600x400@3x.png"
+										class="card-img-top"
+										alt="p-samsat"
+									/>
+									<div class="card-body">
+										<h5 class="card-title">Project E-Samsat</h5>
+										<p class="card-text">
+											This is a longer card with supporting text below as a
+											natural lead-in to additional content. This content is a
+											little bit longer.
+										</p>
+									</div>
 								</div>
 							</div>
-						</div>
-						<div class="col">
-							<div class="card">
-								<img src="..." class="card-img-top" alt="..." />
-								<div class="card-body">
-									<h5 class="card-title">Project Coffe Shop</h5>
-									<p class="card-text">
-										This is a longer card with supporting text below as a
-										natural lead-in to additional content. This content is a
-										little bit longer.
-									</p>
+							<div class="col">
+								<div class="card">
+									<img
+										src="https://placehold.co/600x400@3x.png"
+										class="card-img-top"
+										alt="p-coffeshop"
+									/>
+									<div class="card-body">
+										<h5 class="card-title">Project Coffe Shop</h5>
+										<p class="card-text">
+											This is a longer card with supporting text below as a
+											natural lead-in to additional content. This content is a
+											little bit longer.
+										</p>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -348,6 +409,33 @@
 				</div>
 			</div>
 		</section>
+
+		<!-- <button data-bs-toggle="collapse" data-bs-target="#contoh">
+			Klik saya
+		</button> -->
+
+		<!-- <div class="collapse" id="contoh">Ini konten yang bisa dibuka tutup</div> -->
+
+		<!-- Tombol -->
+		<!-- <button
+			class="btn btn-primary"
+			data-bs-toggle="modal"
+			data-bs-target="#myModal"
+		>
+			Buka Modal
+		</button> -->
+
+		<!-- Modal -->
+		<!-- <div class="modal fade" id="myModal">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5>Judul</h5>
+					</div>
+					<div class="modal-body">Ini isi modal</div>
+				</div>
+			</div>
+		</div> -->
 
 		<footer class="py-3 bg-dark">
 			<p class="text-center text-white">© 2026 created by jumz</p>
@@ -358,6 +446,15 @@
 			integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
 			crossorigin="anonymous"
 		></script>
+
+		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+		<script>
+			AOS.init({
+				once: false,
+				duration: 2000,
+			});
+		</script>
 
 		<script>
 			const toggler = document.querySelector(".navbar-toggler");

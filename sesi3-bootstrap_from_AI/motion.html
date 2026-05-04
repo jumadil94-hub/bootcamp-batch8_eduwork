@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="id">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Manual Scroll Animation</title>
+
+		<!-- Bootstrap 5.3 -->
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+		/>
+
+		<style>
+			/* ===== STATE AWAL (sebelum scroll) ===== */
+			.reveal {
+				opacity: 0;
+				transform: translateY(40px) scale(0.95);
+				filter: blur(10px);
+				transition: all 1.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+				will-change: opacity, transform, filter;
+			}
+
+			/* ===== STATE AKTIF (masuk viewport) ===== */
+			.reveal.active {
+				opacity: 1;
+				transform: translateY(0) scale(1);
+				filter: blur(0);
+			}
+
+			/* variasi arah (opsional premium feel) */
+			.reveal.left {
+				transform: translateX(-60px) scale(0.95);
+			}
+
+			.reveal.right {
+				transform: translateX(60px) scale(0.95);
+			}
+
+			.reveal.left.active,
+			.reveal.right.active {
+				transform: translateX(0) scale(1);
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="container py-5">
+			<h2 class="text-center mb-5 reveal">Premium Animation</h2>
+
+			<div class="row g-4">
+				<div class="col-md-4">
+					<div class="card p-4 shadow-sm reveal">
+						<h5>Fade + Blur</h5>
+						<p>Masuk dengan efek halus seperti glass UI modern</p>
+					</div>
+				</div>
+
+				<div class="col-md-4">
+					<div class="card p-4 shadow-sm reveal left">
+						<h5>From Left</h5>
+						<p>Slide + scale + blur</p>
+					</div>
+				</div>
+
+				<div class="col-md-4">
+					<div class="card p-4 shadow-sm reveal right">
+						<h5>From Right</h5>
+						<p>Efek premium landing page</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- SCRIPT -->
+		<script>
+			const elements = document.querySelectorAll(".reveal");
+
+			const observer = new IntersectionObserver(
+				(entries) => {
+					entries.forEach((entry) => {
+						if (entry.isIntersecting) {
+							entry.target.classList.add("active");
+						} else {
+							entry.target.classList.remove("active");
+						}
+					});
+				},
+				{
+					threshold: 0.15,
+				},
+			);
+
+			elements.forEach((el) => observer.observe(el));
+		</script>
+	</body>
+</html>
